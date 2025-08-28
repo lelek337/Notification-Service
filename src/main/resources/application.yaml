@@ -54,9 +54,6 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       acks: all
-    retries:
-      max-retries: 3
-      interval-ms: 1000
 
     #        spring.json.add.type.headers: false
     topic:
@@ -65,10 +62,19 @@ spring:
       push-events: push-events
       telegram-events: telegram-events
 
-scheduler:
-  batch-size: 1
-  timeout-ms: 12000
-  cron: "2 * * * * *"
+inbox:
+  telegram-scheduler:
+    batch-size: 1
+    delay-ms: 12000
+  sms-scheduler:
+    batch-size: 2
+    delay-ms: 15000
+  email-scheduler:
+    batch-size: 3
+    delay-ms: 16000
+  push-scheduler:
+    batch-size: 4
+    delay-ms: 17000
 
 management:
   endpoint:
@@ -85,11 +91,3 @@ management:
       enabled: true
     livenessstate:
       enabled: true
-
-springdoc:
-  api-docs:
-    path: /v3/api-docs
-  swagger-ui:
-    url: /v3/api-docs
-
-
