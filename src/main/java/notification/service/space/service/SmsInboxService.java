@@ -23,6 +23,7 @@ public class SmsInboxService {
                 .topic(topic)
                 .key(key)
                 .value(smsEvent)
+                .processed(false)
                 .build();
 
         repository.save(entity);

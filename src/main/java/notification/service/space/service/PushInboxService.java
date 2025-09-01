@@ -22,6 +22,7 @@ public class PushInboxService {
                 .topic(topic)
                 .key(key)
                 .value(pushEvent)
+                .processed(false)
                 .build();
 
         repository.save(entity);

@@ -70,7 +70,7 @@ public class KafkaConsumer {
         }
     }
 
-    @KafkaListener(topics = "${spring.kafka.topic.email-events}")
+    @KafkaListener(topics = "${spring.kafka.topic.telegram-events}")
     public void telegramEventsConsume(ConsumerRecord<String, byte[]> event) {
         logEventInfo(event);
         try {

@@ -29,10 +29,10 @@ public class KafkaConfig {
     @Value("${spring.kafka.bootstrap-servers}")
     private String bootstrapServers;
 
-    @Value("${spring.kafka.consumer.group-id")
+    @Value("${spring.kafka.consumer.group-id}")
     private String groupId;
 
-    @Value("$spring.kafka.consumer.auto-offset-reset")
+    @Value("${spring.kafka.consumer.auto-offset-reset}")
     private String autoOffsetReset;
 
     private final KafkaProperties kafkaProperties;

@@ -22,6 +22,7 @@ public class EmailInboxService {
                 .topic(topic)
                 .key(key)
                 .value(emailEvent)
+                .processed(false)
                 .build();
 
         repository.save(entity);

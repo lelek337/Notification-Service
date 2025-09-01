@@ -1,5 +1,5 @@
 server:
-  port: 9191
+  port: 9291
 
 logging:
   config:
@@ -13,11 +13,6 @@ project:
 spring:
   application:
     name: notification-service
-
-  security:
-    user:
-      name: Ivan
-      password: 1234
 
   datasource:
     driver-class-name: org.postgresql.Driver

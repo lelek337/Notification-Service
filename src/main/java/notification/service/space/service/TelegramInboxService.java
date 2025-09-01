@@ -22,6 +22,7 @@ public class TelegramInboxService {
                 .topic(topic)
                 .key(key)
                 .value(telegramEvent)
+                .processed(false)
                 .build();
 
         repository.save(entity);

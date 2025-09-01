@@ -27,7 +27,7 @@ public class EmailInboxEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID uuid;
+    private UUID id;
 
     @CreationTimestamp
     @Column(name = "create_at", nullable = false, updatable = false)
@@ -42,7 +42,7 @@ public class EmailInboxEntity {
     @Column(name = "value", nullable = false, columnDefinition = "text")
     private String value;
 
-    @Column(name = "processed", nullable = false, columnDefinition = "boolean default false")
+    @Column(name = "processed", nullable = false)
     private boolean processed;
 
     @Column(name = "attempt", nullable = false, columnDefinition = "integer default 0")
