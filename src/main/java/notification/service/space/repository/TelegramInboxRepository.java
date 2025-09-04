@@ -1,6 +1,5 @@
 package notification.service.space.repository;
 
-import notification.service.space.model.entity.SmsInboxEntity;
 import notification.service.space.model.entity.TelegramInboxEntity;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
